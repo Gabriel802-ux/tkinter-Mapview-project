@@ -1,4 +1,4 @@
-#als Paket wird tkinter ausgewählt 
+#Pakete importieren 
 from tkinter import *
 from tkinter.ttk import Combobox
 import tkinter as tk
@@ -18,8 +18,6 @@ fenster.title("Kartenerstellung") #Titel für das Programmfenster
 #Funktion der Auswahl der Map anzeige
 #Definition erstellen
 def switch_layer():
-    
-
     try:
        
         x = textfeld_1.get()
@@ -38,14 +36,9 @@ def switch_layer():
 #Definition erstellen
 def get_input():
     try:
-        
-
         ortList.append(textfeld_2.get())
         map_widget.set_address(textfeld_2.get(), marker = True)
         viewSelected()
- 
-
-
         fenster.mainloop()
 
     except: 
@@ -68,12 +61,12 @@ def viewSelected():
     if choice == "Distanz anzeigen":
         label_10 = Label(fenster, width=32, text=f"{distanz}km", relief = 'solid', borderwidth = 1,  bg = 'white', font= ('Arial 10 bold'))
         label_10.place(x=277, y=140)
-        #map_widget.set_adress([distance.distance(geocoder.osm(i).latlng for i in ortList)]).km
-         
+        
     elif choice == "Verbindungslinie hinzufügen":
        map_widget.set_path([geocoder.osm(i).latlng for i in ortList])
     else:
         pass
+
 
 #Funktion für die  Ausführung Map zurücksetzen
 #Definition erstellen
@@ -127,8 +120,6 @@ button_2.place(x=20, y=615)
 #Button3 "schließen" erstellen 
 button_3 = tk.Button(fenster, text="schließen", font = ('Arial 10 bold'), width=31, relief = 'solid', borderwidth = 1, height=2, bg = '#999932',command= (lambda: fenster.destroy()))
 button_3.place(x=280, y=615)
-
-
 
 #Befehle ausführen; das Fenster starten
 fenster.mainloop()
