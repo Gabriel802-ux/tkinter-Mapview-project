@@ -177,3 +177,6 @@ button_7.place(x=280, y=615)
 
 #Befehle ausführen; das Fenster starten
 fenster.mainloop()
+
+
+#Das ist ein Blödsinn 
