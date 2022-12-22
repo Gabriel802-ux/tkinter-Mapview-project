@@ -179,4 +179,3 @@ button_7.place(x=280, y=615)
 fenster.mainloop()
 
 
-#Das ist ein Blödsinn 
